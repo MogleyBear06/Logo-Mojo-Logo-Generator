@@ -20,7 +20,7 @@ inquirer.prompt( [ {
     message: "What color do you want your text to be?",
 },
 {
-    type: "input",
+    type: "list",
     name: "shape",
     message: "What shape do you want your logo to be?",
     choices: ["triangle", "circle", "square"],
@@ -32,8 +32,8 @@ inquirer.prompt( [ {
 },
 
 ]).then(({ name, textcolor, shape, shapecolor }) => {
-    const svgContent = generateLogo(name, textcolor, shape, shapecolor);
-    fs.appendFile('./examples/' + `${shape}-${name}.svg`, svgContent, (err) => {
+    const logoRequirements = generateLogo(name, textcolor, shape, shapecolor);
+    fs.writeFile('./examples/' + `${shape}-${name}.svg`, logoRequirements, (err) => {
         if (err) {
             console.error('Cannot generate logo:', err);
         } else {

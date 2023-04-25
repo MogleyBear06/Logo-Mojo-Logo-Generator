@@ -19,6 +19,8 @@
   ## Installation
   First, the user has to clone the GitHub repository into their local machine. Afterward, the user must then download the dependencies via CLI command npm install.
   
+  App Demo: https://drive.google.com/file/d/1f_qhANEXI9RCT9blCOTwjs0mi3ne7iOz/view
+  
   ## Usage
   This app is used by developers or anyone wanting to create a logo for thier brand and/or project independent of a designer.
   

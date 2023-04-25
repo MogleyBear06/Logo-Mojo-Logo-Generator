@@ -1,10 +1,10 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const logo = require("./libs/shapes.js");
+const logo = require("./lib/shapes.js");
 
 function generateLogo(name, textcolor, shape, shapecolor) {
     const logoShape = logo[shape];
-    return `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">${logoShape(shapecolor)}
+    return `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">${logoShape.svg(shapecolor)}
         <text x="150" y="125" font-size="62" fill="${textcolor}" dy="-0.27rem" text-anchor="middle">${name}</text>
     </svg>`;
 }
